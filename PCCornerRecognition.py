@@ -1,4 +1,9 @@
 # preliminary results written and accomplished yesterday (in the middle of updating the code so that it is concise and make sense)
+# ... also generating more data in order to get more accurate results. Using ParaView in Render Window mode and excel spreadsheet
+# , one can select only the points they want to see in the render window (utilizing the selection tool widget) and generate
+# a list of pIds that represent corners in the point cloud. Using the function below, you can pass the polydata and the list
+# of point ids to update as corners then proceed to the neural network for training. These are the steps I took, and are 
+# continuing to develop. This will eventually go back into the YDLidarSLAM project for Simultatenous Localization and mapping.
 
 import os
 import numpy as np
