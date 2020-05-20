@@ -123,7 +123,7 @@ model.summary()
 
 callback_list = [ModelCheckpoint("best-model.h5", monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')]
 
-model.fit(X, y, validation_split=0.2, epochs=500, batch_size=4, callbacks=callback_list)
+model.fit(X, y, validation_split=0.2, epochs=100, batch_size=20, callbacks=callback_list)
 
 
 files = glob("/home/kdean/ydlidar_clouds/data/*.vtp")
