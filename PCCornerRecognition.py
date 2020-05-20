@@ -118,7 +118,7 @@ c8 = Conv1D(filters * 2, kernel, activation="relu", padding="same")(concat4)
 c9 = Conv1D(1, 1)(c8)
 
 model = Model(inputs=inputs, outputs=c9)
-model.compile(loss=Huber(), optimizer=Adam(lr=1e-4), metrics=['accuracy'])
+model.compile(loss="binary_crossentropy", optimizer=Adam(lr=1e-4), metrics=['accuracy'])
 model.summary()
 
 callback_list = [ModelCheckpoint("best-model.h5", monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')]
